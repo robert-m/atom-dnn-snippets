@@ -1,0 +1,18 @@
+{
+  "name": "dnn-snippets",
+  "main": "./lib/dnn-snippets",
+  "version": "0.0.1",
+  "description": "DNN (DotNetNuke) Snippets for ATOM Editor",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "dnn-snippets:toggle"
+  },
+  "repository": "https://github.com/atom/dnn-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

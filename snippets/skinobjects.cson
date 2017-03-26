@@ -1,0 +1,17 @@
+".text.html":
+
+  'DNN Skin Path':
+    'prefix': 'dnnskinpath'
+    'body': '<% =SkinPath %>${1:Add Additonal Paths?}'
+
+  'DNN Active Page ID':
+    'prefix': 'dnnpageid'
+    'body': '<% =PortalSettings.ActiveTab.TabID %>'
+
+  'DNN Active Page Title':
+    'prefix': 'dnnpagetitle'
+    'body': '<% =PortalSettings.ActiveTab.Title %>'
+
+  'DNN Page Description':
+    'prefix': 'dnnpagetitle'
+    'body': '<% =PortalSettings.Description %>'

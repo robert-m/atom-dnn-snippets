@@ -1,0 +1,9 @@
+'.text.html':
+  'editor':
+    'completions': [
+
+      # Snippets
+      'dnnskinpath'
+
+
+    ]
