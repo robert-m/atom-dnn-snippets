@@ -4,6 +4,6 @@
     'prefix': 'dnncss'
     'body': """<dnn:DnnCssInclude runat="server" Priority="$1" ForceProvider="${2:DnnPageHeaderProvider|DnnFormBottomProvider}" PathNameAlias="${3:SkinPath|SharedScripts}" FilePath="$4" />"""
 
-  'DNN Include: JS':
-    'prefix': 'dnnjs'
-    'body': """<dnn:DnnJsInclude runat="server" Priority="$1" ForceProvider="${2:DnnPageHeaderProvider|DnnFormBottomProvider}" PathNameAlias="${3:SkinPath|SharedScripts}" FilePath="$4" />"""
+    'DNN Include: JS':
+      'prefix': 'dnnjs'
+      'body': """<dnn:DnnJsInclude runat="server" Priority="$1" ForceProvider="${2:DnnPageHeaderProvider|DnnFormBottomProvider}" PathNameAlias="${3:SkinPath|SharedScripts}" FilePath="$4" />"""

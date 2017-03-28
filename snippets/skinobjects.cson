@@ -4,7 +4,7 @@
     'prefix': 'dnnskinpath'
     'body': """<% =SkinPath %>${1:Add Additonal Paths?}"""
 
-  'NN Skin Token: Active Page ID':
+  'DNN Skin Token: Active Page ID':
     'prefix': 'dnnpageid'
     'body': """<% =PortalSettings.ActiveTab.TabID %>"""
 
@@ -24,6 +24,6 @@
     'prefix': 'dnnhomepageurl'
     'body': """<% = DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"""
 
-    'DNN Skin Token: Container Pane':
-      'prefix': 'dnnpane'
-      'body': """<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>"""
+  'DNN Skin Token: Container Pane':
+    'prefix': 'dnnpane'
+    'body': """<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>"""
