@@ -1,9 +1,10 @@
-'.text.html':
+'.text.html, .text.css, .source.js':
   'editor':
     'completions': [
 
       # Snippets
-      'dnnskinpath'
-
+      'dnnskinpath',
+      'dnnpageid',
+      'dnnpagetitle'
 
     ]

@@ -1,17 +1,29 @@
 ".text.html":
 
-  'DNN Skin Path':
+  'DNN Skin Token: Skin Path':
     'prefix': 'dnnskinpath'
-    'body': '<% =SkinPath %>${1:Add Additonal Paths?}'
+    'body': """<% =SkinPath %>${1:Add Additonal Paths?}"""
 
-  'DNN Active Page ID':
+  'NN Skin Token: Active Page ID':
     'prefix': 'dnnpageid'
-    'body': '<% =PortalSettings.ActiveTab.TabID %>'
+    'body': """<% =PortalSettings.ActiveTab.TabID %>"""
 
-  'DNN Active Page Title':
+  'DNN Skin Token: Active Page Title':
     'prefix': 'dnnpagetitle'
-    'body': '<% =PortalSettings.ActiveTab.Title %>'
+    'body': """<% =PortalSettings.ActiveTab.Title %>"""
 
-  'DNN Page Description':
-    'prefix': 'dnnpagetitle'
-    'body': '<% =PortalSettings.Description %>'
+  'DNN Skin Token: Active Page Title (No Space + Lowercase)':
+    'prefix': 'dnnpagetitleclean'
+    'body': """<% =PortalSettings.ActiveTab.Title.Replace(" ","").ToLower() %>"""
+
+  'DNN Skin Token: Page Description':
+    'prefix': 'dnnpagedescription'
+    'body': """<% =PortalSettings.Description %>"""
+
+  'DNN Skin Token: Home Page Url':
+    'prefix': 'dnnhomepageurl'
+    'body': """<% = DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"""
+
+    'DNN Skin Token: Container Pane':
+      'prefix': 'dnnpane'
+      'body': """<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>"""
