@@ -5,4 +5,4 @@ Snippets + AutoCompletions to add common DNN ( **DotNetNuke CMS** ) tags when bu
 **NOTE :** This package is still in heavy alpha stage. Will be adding more skin tags along the way.
 
 
-![ATOM-DNN Snippets & AutoCompletions](atom-dnn-logo.png)
+![ATOM-DNN Snippets & AutoCompletions](https://raw.githubusercontent.com/robert-m/atom-dnn-snippets/master/atom-dnn-logo.png)
