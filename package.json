@@ -1,23 +1,23 @@
 {
-    "name": "atom-dnn-snippets",
-    "version": "0.2.0",
-    "description": "DNN (DotNetNuke CMS) Snippets for ATOM Editor",
-    "keywords": [
-        "DNN",
-        "DNN CMS",
-        "DotNetNuke",
-        "Snippets",
-        "AutoCompletions",
-        "ASCX",
-        "Development"
-    ],
-    "activationCommands": {
-        "atom-workspace": "dnn:toggle"
-    },
-    "repository": "https://github.com/robert-m/atom-dnn-snippets",
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.0.0 <2.0.0"
-    },
-    "dependencies": {}
+  "name": "atom-dnn-snippets",
+  "version": "0.3.0",
+  "description": "DNN (DotNetNuke CMS) Snippets for ATOM Editor",
+  "keywords": [
+    "DNN",
+    "DNN CMS",
+    "DotNetNuke",
+    "Snippets",
+    "AutoCompletions",
+    "ASCX",
+    "Development"
+  ],
+  "activationCommands": {
+    "atom-workspace": "dnn:toggle"
+  },
+  "repository": "https://github.com/robert-m/atom-dnn-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
 }
