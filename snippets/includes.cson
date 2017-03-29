@@ -2,8 +2,18 @@
 
   'DNN Include: CSS':
     'prefix': 'dnncss'
+    'description': 'Insert a CSS file to the header or body of the HTML file',
     'body': """<dnn:DnnCssInclude runat="server" Priority="$1" ForceProvider="${2:DnnPageHeaderProvider|DnnFormBottomProvider}" PathNameAlias="${3:SkinPath|SharedScripts}" FilePath="$4" />"""
 
-    'DNN Include: JS':
-      'prefix': 'dnnjs'
-      'body': """<dnn:DnnJsInclude runat="server" Priority="$1" ForceProvider="${2:DnnPageHeaderProvider|DnnFormBottomProvider}" PathNameAlias="${3:SkinPath|SharedScripts}" FilePath="$4" />"""
+  'DNN Include: JS':
+    'prefix': 'dnnjs'
+    'description': 'Insert a JS file to the header or body of the HTML file',
+    'body': """<dnn:DnnJsInclude runat="server" Priority="$1" ForceProvider="${2:DnnPageHeaderProvider|DnnFormBottomProvider}" PathNameAlias="${3:SkinPath|SharedScripts}" FilePath="$4" />"""
+
+  'DNN Include: File':
+    'prefix': 'dnninclude',
+    'description': 'ServerSide Include file with comment',
+    'body': """
+            <!-- ### ${1:${2:Add comment or inherit below}} ### -->
+            <!-- #include file="${1:Path to file}" -->
+            """

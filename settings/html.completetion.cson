@@ -2,9 +2,7 @@
   'editor':
     'completions': [
 
-      # Snippets
-      'dnnskinpath',
-      'dnnpageid',
-      'dnnpagetitle'
+    
+
 
     ]
