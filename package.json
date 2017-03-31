@@ -1,6 +1,6 @@
 {
   "name": "atom-dnn-snippets",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "DNN (DotNetNuke CMS) Snippets for ATOM Editor",
   "keywords": [
     "DNN",
