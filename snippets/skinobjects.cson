@@ -2,42 +2,42 @@
 
   'DNN Skin Token: Skin Path':
     'prefix': 'dnnskinpath'
-    'description': '',
+    'description': ''
     'body': """<%= SkinPath %>${1:Add Additonal Paths?}"""
 
   'DNN Skin Token: Active Page ID':
     'prefix': 'dnnpageid'
-    'description': '',
+    'description': ''
     'body': """<%= PortalSettings.ActiveTab.TabID %>"""
 
   'DNN Skin Token: Active Page Title':
     'prefix': 'dnnpagetitle'
-    'description': '',
+    'description': ''
     'body': """<%= PortalSettings.ActiveTab.Title %>"""
 
   'DNN Skin Token: Active Page Title (No Space + Lowercase)':
     'prefix': 'dnnpagetitleclean'
-    'description': '',
+    'description': ''
     'body': """<%= PortalSettings.ActiveTab.Title.Replace(" ","").ToLower() %>"""
 
   'DNN Skin Token: Page Description':
     'prefix': 'dnnpagedescription'
-    'description': '',
+    'description': ''
     'body': """<%= PortalSettings.Description %>"""
 
   'DNN Skin Token: Home Page Url':
     'prefix': 'dnnhomepageurl'
-    'description': '',
+    'description': ''
     'body': """<%= DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"""
 
   'DNN Skin Token: Container Pane':
     'prefix': 'dnnpane'
-    'description': '',
+    'description': ''
     'body': """<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>"""
 
   'DNN : FortyFingers Style Helper':
     'prefix': 'dnnff-default'
-    'description': 'Removes DEFAULT.css from page when logged out as Admin',
+    'description': 'Removes DEFAULT.css from page when logged out as Admin'
     'body': """
             <%-- Removes DEFAULT.css file when not logged in as Admin or HOST --%>
             <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
