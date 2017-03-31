@@ -2,28 +2,46 @@
 
   'DNN Skin Token: Skin Path':
     'prefix': 'dnnskinpath'
-    'body': """<% =SkinPath %>${1:Add Additonal Paths?}"""
+    'description': '',
+    'body': """<%= SkinPath %>${1:Add Additonal Paths?}"""
 
   'DNN Skin Token: Active Page ID':
     'prefix': 'dnnpageid'
-    'body': """<% =PortalSettings.ActiveTab.TabID %>"""
+    'description': '',
+    'body': """<%= PortalSettings.ActiveTab.TabID %>"""
 
   'DNN Skin Token: Active Page Title':
     'prefix': 'dnnpagetitle'
-    'body': """<% =PortalSettings.ActiveTab.Title %>"""
+    'description': '',
+    'body': """<%= PortalSettings.ActiveTab.Title %>"""
 
   'DNN Skin Token: Active Page Title (No Space + Lowercase)':
     'prefix': 'dnnpagetitleclean'
-    'body': """<% =PortalSettings.ActiveTab.Title.Replace(" ","").ToLower() %>"""
+    'description': '',
+    'body': """<%= PortalSettings.ActiveTab.Title.Replace(" ","").ToLower() %>"""
 
   'DNN Skin Token: Page Description':
     'prefix': 'dnnpagedescription'
-    'body': """<% =PortalSettings.Description %>"""
+    'description': '',
+    'body': """<%= PortalSettings.Description %>"""
 
   'DNN Skin Token: Home Page Url':
     'prefix': 'dnnhomepageurl'
-    'body': """<% = DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"""
+    'description': '',
+    'body': """<%= DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"""
 
   'DNN Skin Token: Container Pane':
     'prefix': 'dnnpane'
+    'description': '',
     'body': """<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>"""
+
+  'DNN : FortyFingers Style Helper':
+    'prefix': 'dnnff-default'
+    'description': 'Removes DEFAULT.css from page when logged out as Admin',
+    'body': """
+            <%-- Removes DEFAULT.css file when not logged in as Admin or HOST --%>
+            <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
+            <% If Not DotNetNuke.Security.Permissions.TabPermissionController.CanManagePage() Then%>
+            	<fortyfingers:STYLEHELPER runat="server" ID="STYLEADMINS" RemoveCssFile="default.css" IfRole="!Administrators" BodyClass="pge_[PageName]" />
+            <% End If %>
+            """

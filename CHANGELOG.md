@@ -1,3 +1,10 @@
+
+## 0.5.0
+* **Added** FortyFingers Style Helper - emoves DEFAULT.css from page when logged out as Admin
+* **Added** ID properties for DNNJS snippet
+* **Added** Snippeted descriptions
+* **Updates** General cleanup
+
 ## 0.2.0 - First Release
 
 * **Added** Skin Token: Skin Path
