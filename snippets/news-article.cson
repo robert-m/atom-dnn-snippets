@@ -1,52 +1,181 @@
 ".text.html":
 
-'NewsArticle: Article ID':
-'prefix': 'dnnnews-articleid'
-'description': ''
-'body': '[ARTICLEID]'
+  'NewsArticle: Title':
+    'prefix': 'dnnnews-articleid'
+    'description': 'Article Title'
+    'body': '[TITLE]'
 
-'NewsArticle: Link Source':
-'prefix': 'dnnnews-articlelink'
-'description': ''
-'body': '[ARTICLELINK]'
+  'NewsArticle: Title URL Encoded':
+    'prefix': 'dnnnews-articleid'
+    'description': 'Article Title URL Encoded'
+    'body': '[TITLEURLENCODED]'
 
-'NewsArticle: Article Link XXX':
-'prefix': 'news-linkx'
-'description': '[ARTICLELINK:XXX] where XXX is another article ID.',
-'body': '<a href="[LINK${1:XXX}]" class="$2">${3:Enter Link Text}</a>'
+  'NewsArticle: Article ID':
+    'prefix': 'dnnnews-articleid'
+    'description': ''
+    'body': '[ARTICLEID]'
 
-'NewsArticle: Article Link':
-'prefix': 'dnnnews-link'
-'description': ''
-'body': '<a href="[LINK]" class="$1">${2:Enter Link Text}</a>'
+  'NewsArticle: Link Source':
+    'prefix': 'dnnnews-articlelink'
+    'description': ''
+    'body': '[ARTICLELINK]'
 
-'NewsArticle: Author XXX':
-'prefix': 'dnnnews-authorx'
-'description': '[AUTHOR:XXX] Where XXX is the Profile Field name. e.g. [AUTHOR:FirstName]',
-'body': '[AUTHOR${1:FirstName}]'
+  'NewsArticle: Article Link XXX':
+    'prefix': 'news-linkx'
+    'description': '[ARTICLELINK:XXX] where XXX is another article ID.'
+    'body': '<a href="[LINK${1:XXX}]" class="$2">${3:Enter Link Text}</a>'
 
-'NewsArticle: Caption XXX':
-'prefix': 'dnnnews-captionx'
-'description': '[CAPTION:XXX] Where XXX is the Name of the Caption.',
-'body': '[CAPTION${1:XXX}]'
+  'NewsArticle: Article Link':
+    'prefix': 'dnnnews-summary'
+    'description': 'Article Summary'
+    'body': '[SUMMARY]'
+
+  'NewsArticle: Summary':
+    'prefix': 'dnnnews-link'
+    'description': ''
+    'body': '<a href="[LINK]" class="$1">${2:Enter Link Text}</a>'
+
+  'NewsArticle: Author XXX':
+    'prefix': 'dnnnews-authorx'
+    'description': '[AUTHOR:XXX] Where XXX is the Profile Field name. e.g. [AUTHOR:FirstName]'
+    'body': '[AUTHOR:${1:FirstName}]'
+
+  'NewsArticle: Caption XXX':
+    'prefix': 'dnnnews-captionx'
+    'description': '[CAPTION:XXX] Where XXX is the Name of the Caption.'
+    'body': '[CAPTION:${1:XXX}]'
+
+  'NewsArticle: HasAuthor':
+    'prefix': 'dnnnews-hasauthor'
+    'description': 'Has Author.'
+    'body': """
+            <%-- As Author --%>
+            [HASAUTHOR]
+            	$2
+            [/HASAUTHOR]
+            """
+
+  'NewsArticle: HasAuthor XXX':
+    'prefix': 'dnnnews-hasauthorx'
+    'description': 'A Specific Author = XXXX',
+    'body': """
+            <%-- As Specific Author --%>
+            [HASAUTHORVALUE:$1]
+            	$2
+            [/HASAUTHOR:$1]
+            """
+
+  #[Featured]
+  'NewsArticle: Featured':
+    'prefix': 'dnnnews-featured'
+    'description': 'Is the Article Featured?'
+    'body': """
+            [ISFEATURED]
+            	$2
+            [/ISFEATURED]
+            """
+
+  'NewsArticle: Not Featured':
+    'prefix': 'dnnnews-isnotfeatured'
+    'description': 'Article(s) are NOT Featured'
+    'body': """
+            [ISNOTFEATURED]
+            	$2
+            [/ISNOTFEATURED]
+            """
+
+  #[Order Options]
+  'NewsArticle: Is First':
+    'prefix': 'dnnnews-isfirst'
+    'description': 'Article is 1st in the list',
+    'body': """
+            [ISFIRST]
+            	$2
+            [/ISFIRST]
+            """
+
+  'NewsArticle: Is First2':
+    'prefix': 'dnnnews-isfirst2'
+    'description': 'Article is First2'
+    'body': """
+            [ISFIRST2]
+            	$2
+            [/ISFIRST2]
+            """
+
+  'NewsArticle: Is 2nd':
+    'prefix': 'dnnnews-isfirst2'
+    'description': 'Article is 2nd in the list'
+    'body': """
+            [ISSECOND]
+            	$2
+            [/ISSECOND]
+            """
 
 
-'NewsArticle: HasAuthor':
-'prefix': 'dnnnews-hasauthor'
-'description': 'Has Author.',
-'body': """
-				<%-- As Author --%>
-				[HASAUTHOR]
-					$1
-				[/HASAUTHOR]
-				"""
+  'NewsArticle: Is Not 1st':
+    'prefix': 'dnnnews-isnotfirst'
+    'description': 'Article is not the 1st'
+    'body': """
+            [ISNOTFIRST]
+            	$2
+            [/ISNOTFIRST]
+            """
 
-'NewsArticle: HasAuthor XXX':
-'prefix': 'dnnnews-hasauthorx'
-'description': 'A Specific Author = XXXX',
-'body': """
-				<%-- As Specific Author --%>
-				[HASAUTHORVALUE:$1]
-					$2
-				[/HASAUTHOR:$1]
-				"""
+  'NewsArticle: Is Not 2nd':
+    'prefix': 'dnnnews-isnotfirst'
+    'description': 'Article is not the 2nd '
+    'body': """
+            [ISNOTSECOND]
+            	$2
+            [/ISNOTSECOND]
+            """
+
+  #[Image Related]
+  'NewsArticle: Image':
+    'prefix': 'dnnnews-image'
+    'description': 'Displays the 1st image in the list of images only'
+    'body': '[IMAGE]'
+
+  'NewsArticle: Image #':
+    'prefix': 'dnnnews-imagez'
+    'description': 'Where ZZZ is the position in list of images'
+    'body': '[IMAGE:${1:ZZZ}]'
+
+  'NewsArticle: Images List':
+    'prefix':      'dnnnews-images'
+    'description': 'Loads the images template file'
+    'body':        '[IMAGES]'
+
+  'NewsArticle: Image Count':
+    'prefix': 'dnnnews-imgcount'
+    'description': 'Display the image count in current article'
+    'body': '[IMAGECOUNT]'
+
+  'NewsArticle: Image URL Link':
+    'prefix': 'dnnnews-imgcount'
+    'description': 'Rednders the image URL only',
+    'body': '[IMAGELINK]'
+
+  'NewsArticle: Image Thumbnail URL':
+    'prefix': 'dnnnews-imgthumbz'
+    'description': 'The actual URL of the link to the thumbnail image'
+    'body': '[IMAGETHUMBLINK:${1:ZZZ}]'
+
+  'NewsArticle: Has Image ':
+    'prefix': 'dnnnews-hasimage'
+    'description': 'Article has atleast 1 image'
+    'body': """
+            [HASIMAGE]
+              $1
+            [/HASIMAGE]
+            """
+
+  'NewsArticle: Has More Images ':
+    'prefix': 'dnnnews-hasimages'
+    'description': 'Article Has More Than 1 Image'
+    'body': """
+            [HASIMAGES]
+              $1
+            [/HASIMAGES]
+            """
