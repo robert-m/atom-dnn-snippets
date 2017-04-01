@@ -12,7 +12,7 @@ module.exports = AtomDnnSnippets =
 
   activate: (state) ->
     @window = document.createElement 'div'
-    @window.className = 'atom-dnn-cheatsheet'
+    @window.className = 'atom-dnn-snippets'
     @window.innerHTML = @html
     @window.style.display = 'none'
     document.body.appendChild(@window)
