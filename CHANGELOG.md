@@ -1,3 +1,5 @@
+## 0.8.0
+* **Updates** Added a new lookup cheatsheet popup for the NewsArticle module.
 
 ## 0.5.0
 * **Added** FortyFingers Style Helper - emoves DEFAULT.css from page when logged out as Admin
