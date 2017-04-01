@@ -1,4 +1,4 @@
-module.exports = AtomDnncheatsheet =
+module.exports = AtomDnnSnippets =
 
   window: null
 
