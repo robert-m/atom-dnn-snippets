@@ -2,46 +2,215 @@
 
   'DNN Skin Token: Skin Path':
     'prefix': 'dnnskinpath'
-    'description': ''
-    'body': """<%= SkinPath %>${1:Add Additonal Paths?}"""
+    'description': 'Skin Path'
+    'body': '<%= SkinPath %>${1:Add Additonal Paths?}'
 
   'DNN Skin Token: Active Page ID':
     'prefix': 'dnnpageid'
-    'description': ''
-    'body': """<%= PortalSettings.ActiveTab.TabID %>"""
+    'description': 'Active Page ID'
+    'body': '<%= PortalSettings.ActiveTab.TabID %>'
 
   'DNN Skin Token: Active Page Title':
     'prefix': 'dnnpagetitle'
-    'description': ''
-    'body': """<%= PortalSettings.ActiveTab.Title %>"""
+    'description': 'Active Page Title'
+    'body': '<%= PortalSettings.ActiveTab.Title %>'
 
   'DNN Skin Token: Active Page Title (No Space + Lowercase)':
     'prefix': 'dnnpagetitleclean'
-    'description': ''
-    'body': """<%= PortalSettings.ActiveTab.Title.Replace(" ","").ToLower() %>"""
+    'description': 'Active Page Title (No Space + Lowercase)'
+    'body': '<%= PortalSettings.ActiveTab.Title.Replace(" ","").ToLower() %>'
 
-  'DNN Skin Token: Page Description':
+  'DNN Skin Token: Current Page Name':
+    'prefix': 'dnnpagepath'
+    'description': 'Current Page Name'
+    'body': '<% =PortalSettings.ActiveTab.TabName %>'
+
+  'DNN Skin Token: Current Page URL':
+    'prefix': 'dnnpageurl'
+    'description': 'Current Page URL'
+    'body': '<% =PortalSettings.ActiveTab.FullUrl %>'
+
+  'DNN Skin Token: Current Page Description':
     'prefix': 'dnnpagedescription'
-    'description': ''
-    'body': """<%= PortalSettings.Description %>"""
+    'description': 'Current Page Description'
+    'body': '<% =PortalSettings.ActiveTab.Description %>'
 
-  'DNN Skin Token: Home Page Url':
+  'DNN Skin Token: Current Page Type':
+    'prefix': 'dnnpagetype'
+    'description': 'Current Page Type'
+    'body': '<% =PortalSettings.ActiveTab.TabType %>'
+
+  'DNN Skin Token: Portal Description':
+    'prefix': 'dnnportaldescription'
+    'description': 'Portal Description'
+    'body': '<% =PortalSettings.ActiveTab.Description %>'
+
+  'DNN Skin Token: Home Page URL':
     'prefix': 'dnnhomepageurl'
-    'description': ''
-    'body': """<%= DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>"""
+    'description': 'ome Page URL'
+    'body': '<%= DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>'
 
   'DNN Skin Token: Container Pane':
     'prefix': 'dnnpane'
-    'description': ''
-    'body': """<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>"""
+    'description': 'Container Pane'
+    'body': '<div runat="server" id="${1:ContentPane}" class="${2:ContentPane}"/>'
+
+  'DNN Skin Token: Container Title':
+    'prefix': 'dnncontainertitle'
+    'description': 'Container Title'
+    'body': '<dnn:Title runat="server" id="${1:dnnTitle}" />'
+
+  'DNN Skin Token: Container Icon':
+    'prefix': 'dnncontainericon'
+    'description': 'Container Icon'
+    'body': '<dnn:Icon runat="server" id="${1:dnnIcon}" />'
 
   'DNN : FortyFingers Style Helper':
     'prefix': 'dnnff-default'
     'description': 'Removes DEFAULT.css from page when logged out as Admin'
     'body': """
-            <%-- Removes DEFAULT.css file when not logged in as Admin or HOST --%>
-            <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
-            <% If Not DotNetNuke.Security.Permissions.TabPermissionController.CanManagePage() Then%>
-            	<fortyfingers:STYLEHELPER runat="server" ID="STYLEADMINS" RemoveCssFile="default.css" IfRole="!Administrators" BodyClass="pge_[PageName]" />
-            <% End If %>
-            """
+          <%-- Removes DEFAULT.css file when not logged in as Admin or HOST --%>
+          <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
+          <% If Not DotNetNuke.Security.Permissions.TabPermissionController.CanManagePage() Then%>
+          <fortyfingers:STYLEHELPER runat="server" ID="STYLEADMINS" RemoveCssFile="default.css" IfRole="!Administrators" BodyClass="pge_[PageName]" />
+          <% End If %>
+          """
+
+  'DNN : DDR Menu':
+    'prefix': 'dnnmenu'
+    'description': 'DDR Menu SkinObject'
+    'body': '<dnn:Menu runat="server" MenuStyle="$1" NodeSelector="$2" IncludeNodes="$3" ExcludeNodes="$4" IncludeHidden="$5" NodeXmlPath="$6" NodeManipulator="$7"></dnn:MENU>'
+
+  'DNN Skin Token: Root Breadcrumb ID':
+    'prefix': 'dnnrootid'
+    'description': 'Root Breadcrumb ID'
+    'body': '<% =PortalSettings.ActiveTab.BreadCrumbs.Cast<DotNetNuke.Entities.Tabs.TabInfo>().First().TabID %>'
+
+  'DNN Skin Token: Current Page Path':
+    'prefix': 'dnnpagepath'
+    'description': 'Current Page Path'
+    'body': '<% =PortalSettings.ActiveTab.TabPath %>'
+
+  'DNN Skin Token: Portal Directory':
+    'prefix': 'dnnportaldir'
+    'description': 'Portal Directory'
+    'body': '<%= PortalSettings.HomeDirectory %>'
+
+  'DNN Skin Token: Portal Domain Name':
+    'prefix': 'dnnportaldomainname'
+    'description': 'Portal Domain Name'
+    'body': '<% =PortalSettings.PortalAlias.HTTPAlias %>'
+
+  'DNN Skin Token: Portal Name':
+    'prefix': 'dnnportalname'
+    'description': 'Portal Name'
+    'body': '<% =PortalSettings.PortalName %>'
+
+  'DNN Skin Token: Home Page ID':
+    'prefix': 'dnnhomepageid'
+    'description': 'Home Page ID'
+    'body': '<% =PortalSettings.PortalName %>'
+
+  'DNN Skin Token: Home Page URL':
+    'prefix': 'dnnhomepageurl'
+    'description': 'Home Page URL'
+    'body': '<% = DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>'
+
+  'DNN Skin Token: Portal Logo':
+    'prefix': 'dnnlogo'
+    'description': 'Portal Logo'
+    'body': '<dnn:Logo runat="server" id="${1:dnnLogo}" />'
+
+  'DNN Skin Token: Current Page Icon':
+    'prefix': 'dnnpageicon'
+    'description': 'Current Page Icon'
+    'body': '<% =PortalSettings.ActiveTab.IconFile %>'
+
+  'DNN Skin Token: Current Page Level':
+    'prefix': 'dnnpagelevel'
+    'description': 'Current Page Level'
+    'body': '<% =PortalSettings.ActiveTab.Level %>'
+
+  'DNN Skin Token: Portal ID':
+    'prefix': 'dnnportalid'
+    'description': 'Portal ID'
+    'body': '<% =PortalSettings.PortalId %>'
+
+  'DNN Skin Token: Current Page Order':
+    'prefix': 'dnnpageorder'
+    'description': 'Current Page Order'
+    'body': '<% =PortalSettings.ActiveTab.TabOrder %>'
+
+  #[User Related]
+  'DNN Skin Token: User Displayname':
+    'prefix': 'dnnuserdisplayname'
+    'description': 'User Displayname'
+    'body': '<% =UserController.GetCurrentUserInfo().DisplayName %>'
+
+  'DNN Skin Token: User Last Name':
+    'prefix': 'dnnuserlastname'
+    'description': 'User Last Name'
+    'body': '<% =UserController.GetCurrentUserInfo().LastName %>'
+
+  'DNN Skin Token: User First Name':
+    'prefix': 'dnnuserfirstname'
+    'description': 'User First Name'
+    'body': '<% =UserController.GetCurrentUserInfo().FirstName %>'
+
+  'DNN Skin Token: User ID':
+    'prefix': 'dnnuserid'
+    'description': 'User ID'
+    'body': '<% =UserController.GetCurrentUserInfo().UserID %>'
+
+  'DNN Skin Token: User Profile Page URL':
+    'prefix': 'dnnuserprofile'
+    'description': 'User Profile Page URL'
+    'body': '<% =DotNetNuke.Common.Globals.NavigateURL(PortalSettings.UserTabId) %>'
+
+  #[User Profile]
+  'DNN Skin Token: User Email':
+    'prefix': 'dnnuseremail'
+    'description': 'User Email'
+    'body': '<% =UserController.GetCurrentUserInfo().Email %>'
+
+  'DNN Skin Token: Profile Page ID':
+    'prefix': 'dnnprofilepageid'
+    'description': 'Profile Page ID'
+    'body': '<% =PortalSettings.UserTabId %>'
+
+  #[Misc]
+  'DNN Skin Token: Breadcrumb':
+    'prefix': 'dnnbreadcrumb'
+    'description': 'DNN Breadcrumb'
+    'body': '<dnn:Breadcrumb runat="server" id="${1:dnnBreadcrumb}" CssClass="$2" RootLevel="${3:1}" Separator="$4" UseTitle="${5:[true, false]}" />'
+
+  'DNN Skin Token: Current Date':
+    'prefix': 'dnndate'
+    'description': 'DNN Current Date'
+    'body': '<dnn:CurrentDate runat="server" id="${1:dnnCurrentDate}" CssClass="$2" DateFormat="${3:MMM dd, yyyy}" />'
+
+  'DNN Skin Token: Copyright':
+    'prefix': 'dnncopyright'
+    'description': 'DNN Copyright'
+    'body': '<dnn:Copyright runat="server" id="${1:dnnCopyright}" CssClass="$2" />'
+
+  'DNN Skin Token: Language':
+    'prefix': 'dnnlanguage'
+    'description': 'DNN Language'
+    'body': '<dnn:Language runat="server" id="${1:dnnLanguage}" ShowMenu="${2:[true, false]}" ShowLinks="${3:[true, false]}" CommonHeaderTemplate="$4" HeaderTemplate="$5" ItemTemplate="$6" AlternateTemplate="$7" SeparatorTemplate="$8" FooterTemplate="$9" CommonFooterTemplate="$10" CssClass="$11" />'
+
+  #[Links]
+  'DNN Skin Token: Link to Full Site':
+    'prefix': 'dnnlinkfull'
+    'description': 'Link to Full Site'
+    'body': '<dnn:LinkToFullSite ID="${1:dnnLinkToFullSite}" runat="server" />'
+
+  'DNN Skin Token: Links':
+    'prefix': 'dnnlinks'
+    'description': 'DNN Links'
+    'body': '<dnn:LINKS runat="server" id="${1:dnnLINKS}" CssClass="$2" Separator="$3" Alignment="${4:[horizontal, vertical]}" Level="${5:[same, child, parent, root]}" ForceLinks="${6:[true, false]}" />'
+
+  'DNN Skin Token: Link to Mobile Site':
+    'prefix': 'dnnlinkmobile'
+    'description': 'Link to Mobile Site'
+    'body': '<dnn:LinkToMobileSite ID="${1:dnnLinkToMobileSite}" runat="server" />'
