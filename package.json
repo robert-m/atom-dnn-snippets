@@ -1,6 +1,6 @@
 {
   "dependencies": {},
-  "description": "DNN (DotNetNuke CMS) Snippets + Cheatsheeta for ATOM Editor",
+  "description": "DNN (DotNetNuke CMS) Snippets + Cheatsheets for ATOM Editor",
   "devDependencies": {},
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
