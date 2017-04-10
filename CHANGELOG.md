@@ -1,11 +1,15 @@
+## 0.9.0
+* **Updates** - Added a lots of new DNN Skinobject tags (70% Completion)
+* **Updates** - Minor updates to the Ventrian - News Article snippets
+
 ## 0.8.0
-* **Updates** Added a new lookup cheatsheet popup for the NewsArticle module.
+* **Updates** - Added a new lookup cheatsheet popup for the NewsArticle module.
 
 ## 0.5.0
-* **Added** FortyFingers Style Helper - emoves DEFAULT.css from page when logged out as Admin
-* **Added** ID properties for DNNJS snippet
-* **Added** Snippeted descriptions
-* **Updates** General cleanup
+* **Added** - FortyFingers Style Helper - emoves DEFAULT.css from page when logged out as Admin
+* **Added** - ID properties for DNNJS snippet
+* **Added** - Snippeted descriptions
+* **Updates** - General cleanup
 
 ## 0.2.0 - First Release
 

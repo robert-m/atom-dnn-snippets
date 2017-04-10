@@ -1,6 +1,6 @@
 {
   "dependencies": {},
-  "description": "DNN (DotNetNuke CMS) Snippets + cheatsheet for ATOM Editor",
+  "description": "DNN (DotNetNuke CMS) Snippets + Cheatsheeta for ATOM Editor",
   "devDependencies": {},
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -24,5 +24,5 @@
     "type": "git",
     "url": "git+https://github.com/robert-m/atom-dnn-snippets.git"
   },
-  "version": "0.8.0"
+  "version": "0.9.0"
 }
