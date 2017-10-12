@@ -1,5 +1,5 @@
-## 0.9.0
-* **Updates** - Added a lots of new DNN Skinobject tags (70% Completion)
+## 0.10.0
+* **Updates** - Added lots of new DNN Skinobject tags (70% Completion)
 * **Updates** - Minor updates to the Ventrian - News Article snippets
 
 ## 0.8.0

@@ -1,5 +1,4 @@
 ".text.html":
-
   'DNN Skin Token: Skin Path':
     'prefix': 'dnnskinpath'
     'description': 'Skin Path'
@@ -9,6 +8,11 @@
     'prefix': 'dnnpageid'
     'description': 'Active Page ID'
     'body': '<%= PortalSettings.ActiveTab.TabID %>'
+
+  'DNN Skin Token: Parent Page ID':
+    'prefix': 'dnnpageid'
+    'description': 'Parent Page ID'
+    'body': '<%= PortalSettings.ActiveTab.ParentID %>'
 
   'DNN Skin Token: Active Page Title':
     'prefix': 'dnnpagetitle'
@@ -67,7 +71,7 @@
 
   'DNN : FortyFingers Style Helper':
     'prefix': 'dnnff-default'
-    'description': 'Removes DEFAULT.css from page when logged out as Admin'
+    'description': 'Removes DEFAULT.CSS from page when logged out as Admin'
     'body': """
           <%-- Removes DEFAULT.css file when not logged in as Admin or HOST --%>
           <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
@@ -198,6 +202,11 @@
     'prefix': 'dnnlanguage'
     'description': 'DNN Language'
     'body': '<dnn:Language runat="server" id="${1:dnnLanguage}" ShowMenu="${2:[true, false]}" ShowLinks="${3:[true, false]}" CommonHeaderTemplate="$4" HeaderTemplate="$5" ItemTemplate="$6" AlternateTemplate="$7" SeparatorTemplate="$8" FooterTemplate="$9" CommonFooterTemplate="$10" CssClass="$11" />'
+
+  'DNN Skin Token: META Tag ':
+    'prefix': 'dnnmeta'
+    'description': 'DNN Meta Tags'
+    'body': '<dnn:META ID="META1" runat="server" Name="viewport" Content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />'
 
   #[Links]
   'DNN Skin Token: Link to Full Site':
