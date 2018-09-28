@@ -49,11 +49,6 @@
     'description': 'Portal Description'
     'body': '<% =PortalSettings.ActiveTab.Description %>'
 
-  'DNN Skin Token: Home Page URL':
-    'prefix': 'dnnhomepageurl'
-    'description': 'ome Page URL'
-    'body': '<%= DotNetNuke.Common.Globals.NavigateURL(PortalSettings.HomeTabId) %>'
-
   'DNN Skin Token: Container Pane':
     'prefix': 'dnnpane'
     'description': 'Container Pane'
